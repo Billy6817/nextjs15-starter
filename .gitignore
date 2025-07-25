@@ -1,0 +1,100 @@
+###############################################################################
+# 通用 Node.js / Next.js / TypeScript 项目                                   #
+###############################################################################
+
+############################
+# 依赖目录（可再生）        #
+############################
+node_modules/
+
+############################
+# 产物与缓存（可再生）      #
+############################
+# 打包 / 构建输出
+dist/
+build/
+.out/
+.next/
+.next-turbo/
+.nuxt/
+.storybook/
+storybook-static/
+.vite/
+.svelte-kit/
+.esbuild/
+coverage/
+.nyc_output/
+
+# 临时 / 缓存
+.cache/
+.tmp/
+.pnpm-store/
+.pnpm-debug.log
+jest-cache/
+jest-coverage/
+.husky/
+
+############################
+# 日志文件                 #
+############################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+############################
+# 环境变量 & 密钥           #
+############################
+.env
+.env.*.local
+.env.local
+.env.*.env
+*.pem
+*.key
+*.crt
+*.p12
+
+############################
+# IDE / 编辑器配置          #
+############################
+.vscode/
+.idea/
+*.code-workspace
+
+############################
+# 操作系统杂项              #
+############################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+.Spotlight-V100
+.Trashes
+
+############################
+# Docker / 容器相关         #
+############################
+docker-compose.override.yml
+docker-compose.*.yml
+.docker/
+
+############################
+# Terraform / CDK           #
+############################
+.terraform/
+*.tfstate
+*.tfstate.*
+
+############################
+# 其他可再生产物            #
+############################
+*.tgz
+*.zip
+*.tmp
+*.swp
+*.swo
+*.swn
+*.bak
+*.orig

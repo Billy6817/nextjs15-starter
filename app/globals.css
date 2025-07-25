@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局暗色模式样式 */
+@layer base {
+  html {
+    transition: color-scheme 0.3s ease;
+  }
+  
+  html.dark {
+    color-scheme: dark;
+  }
+  
+  html.light {
+    color-scheme: light;
+  }
+  
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* 滚动条样式 */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+}
+
+/* 自定义组件样式 */
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 font-medium;
+  }
+  
+  .btn-secondary {
+    @apply border border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 px-4 py-2 rounded-lg transition-colors duration-200 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100;
+  }
+  
+  /* 品牌色和按钮样式 */
+  .text-brand {
+    @apply text-blue-600 dark:text-blue-400;
+  }
+  
+  .bg-brand {
+    @apply bg-blue-600 dark:bg-blue-500;
+  }
+  
+  .bg-btn {
+    @apply bg-blue-600;
+  }
+  
+  .bg-btn-dark {
+    @apply bg-blue-500;
+  }
+}
